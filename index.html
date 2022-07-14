@@ -454,6 +454,26 @@
             </li>
           </ul>
         </div>
+        <form class="subscription" name="subscription-form">
+          <label class="label-subscription" for="user-email">Подпишитесь на рассылку</label>
+          <div class="subscription-container">
+            <input
+              class="input-subscription"
+              type="email"
+              id="user-email"
+              placeholder="E-mail"
+              name="user-email"
+              required
+              title="Вспоминайте почту"
+            />
+            <button class="btn-subscription" type="submit">
+              Подписаться
+              <svg class="subscription-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
 
