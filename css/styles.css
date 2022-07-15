@@ -723,7 +723,6 @@ ul {
   transition-property: opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
 }
 
 .backdrop.is-hidden {
@@ -746,6 +745,7 @@ opacity: 0; */
   width: 528px;
   height: 581px;
   display: flex;
+  flex-direction: column;
   padding: 40px;
   background-color: var(--light-theme-logo);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -770,4 +770,82 @@ opacity: 0; */
   background-color: var(--light-theme-logo);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  fill: var(--dark-theme-logo);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  fill: var(--dominant-color);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.modal-input-title {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.modal-input-title .name {
+  margin-top: 12px;
+}
+
+.modal-input-container {
+  position: relative;
+}
+
+.modal-input-field {
+  width: 100%;
+  height: 40px;
+  padding: 12px 42px 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input-field:hover,
+.modal-input-field:focus {
+  border-color: var(--dominant-color);
+}
+
+.modal-input-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input-field:hover + .modal-input-icon,
+.modal-input-field:focus + .modal-input-icon {
+  fill: var(--dominant-color);
+}
+
+.modal-comment-field {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.default-checkbox {
+  visibility: hidden;
+  position: absolute;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
 }
