@@ -538,18 +538,28 @@
             placeholder="Введите текст"
           >
           </textarea>
-          <label class="checkbox-label">
-            <input class="checkbox" type="checkbox" name="checkbox-signature" checked />
-            <svg class="checkbox-custom-on" width="16" height="15">
-              <use href="./images/icons.svg#checkbox-off"></use>
-            </svg>
-            <svg class="checkbox-custom-off" width="16" height="15">
-              <use href="./images/icons.svg#icon-check"></use>
-            </svg>
-
-            Соглашаюсь с рассылкой и принимаю
-            <a class="agreement-link" href=""> Условия договора</a>
-          </label>
+          <div class="checkbox-container">
+            <div class="checkbox-custom-container">
+              <input
+                class="checkbox visually-hidden"
+                type="checkbox"
+                name="checkbox-signature"
+                checked
+                id="checkbox"
+              />
+              <svg class="checkbox-custom-off" width="16" height="15">
+                <use href="./images/icons.svg#checkbox-off"></use>
+              </svg>
+              <svg class="checkbox-custom-on" width="16" height="15">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </div>
+            <label for="checkbox">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="agreement-link" href=""> Условия договора</a>
+            </label>
+          </div>
+          <button class="btn-submit" type="submit">Отправить</button>
         </form>
       </div>
     </div>
