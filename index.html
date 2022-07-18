@@ -532,33 +532,27 @@
 
           <label class="modal-input-title" for="user-comment">Комментарий</label>
           <textarea
-            placeholder="Введите текст"
             class="modal-comment-field"
             name="user-comment"
             id="user-comment"
+            placeholder="Введите текст"
           >
           </textarea>
-          <div class="checkbox-container">
-            <div class="checkbox-custom-container">
-              <input
-                class="checkbox visually-hidden"
-                type="checkbox"
-                name="checkbox-signature"
-                checked
-                id="checkbox"
-              />
-              <svg class="checkbox-custom-off" width="16" height="15">
-                <use href="./images/icons.svg#checkbox-off"></use>
-              </svg>
-              <svg class="checkbox-custom-on" width="16" height="15">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
-            </div>
-            <label for="checkbox">
-              Соглашаюсь с рассылкой и принимаю
-              <a class="agreement-link" href=""> Условия договора</a>
-            </label>
-          </div>
+
+          <label class="checkbox-label" for="checkbox">
+            <input
+              class="checkbox visually-hidden"
+              type="checkbox"
+              name="checkbox-signature"
+              checked
+              id="checkbox"
+            />
+            <span class="checkbox-custom"></span>
+
+            Соглашаюсь с рассылкой и принимаю
+            <a class="agreement-link" href=""> Условия договора</a>
+          </label>
+
           <button class="btn-submit" type="submit">Отправить</button>
         </form>
       </div>

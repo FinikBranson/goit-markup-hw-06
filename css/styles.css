@@ -528,9 +528,6 @@ ul {
 
 /* footer subscription form */
 
-.subscription {
-}
-
 .label-subscription {
   margin-bottom: 20px;
   display: block;
@@ -841,25 +838,22 @@ ul {
   border-color: var(--dominant-color);
 }
 
-.checkbox-container {
+.checkbox-label {
   display: flex;
   width: 100%;
   margin-bottom: 30px;
   line-height: 1.71;
   justify-content: center;
+  align-items: center;
 }
 
-.checkbox-custom-container {
-  position: relative;
-  margin-right: 23px;
-}
-
-.checkbox-custom-on,
-.checkbox-custom-off {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+.checkbox-custom {
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 3px;
+  margin-right: 7px;
 }
 
 .agreement-link {
@@ -867,12 +861,10 @@ ul {
   color: var(--dominant-color);
 }
 
-.checkbox-custom-on {
-  opacity: 0;
-}
-
-.checkbox:checked ~ .checkbox-custom-on {
-  opacity: 1;
+.checkbox:checked + .checkbox-custom {
+  background-color: var(--dominant-color);
+  border: none;
+  background-image: url(../images/check-on.svg);
 }
 
 .btn-submit {
